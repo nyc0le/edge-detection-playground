@@ -1,3 +1,13 @@
+---
+title: Edge Detection Playground
+emoji: 🖼️
+colorFrom: blue
+colorTo: purple
+sdk: docker
+app_file: app.py
+pinned: false
+---
+
 # Edge Detection Playground
 
 An interactive educational app for exploring classical edge detection algorithms in image analysis.
