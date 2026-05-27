@@ -113,7 +113,7 @@ Demonstrates:
 ## 1. Clone the repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/nyc0le/edge-detection-playground
 cd edge-detection-playground
 ```
 
@@ -159,25 +159,25 @@ https://huggingface.co/spaces/nyc0le/edge-detection-playground
 
 ## Main Interface
 
-[Screenshot here of side-by-side image comparison and controls]
+![Main Interface](screenshots/main_interface.png)
 
 ---
 
 ## Sobel Diagnostic View
 
-[Screenshot here of gradient magnitude heatmap]
+![Sobel Diagnostic](screenshots/sobel.png)
 
 ---
 
 ## Laplacian Diagnostic View
 
-[Screenshot here of zero-crossing overlay]
+![Laplacian Diagnostic](screenshots/laplacian.png)
 
 ---
 
 ## Canny Diagnostic View
 
-[Screenshot here of strong/weak edge classification map]
+![Canny Diagnostic](screenshots/canny.png)
 
 ---
 
@@ -186,18 +186,25 @@ https://huggingface.co/spaces/nyc0le/edge-detection-playground
 ```text
 edge-detection-playground/
 │
-├── app.py
-├── processing.py
-├── metrics.py
-├── requirements.txt
-├── Dockerfile
-├── README.md
-│
 ├── sample_images/
 │   └── portrait.jpeg
 │
-└── docs/
-    └── design_choices.md
+├── screenshots/
+│   ├── main_interface.png
+│   ├── sobel.png
+│   ├── laplacian.png
+│   └── canny.png
+│
+├── docs/
+│   └── design_choices.md
+│
+├── .gitattributes
+├── app.py
+├── Dockerfile
+├── metrics.py
+├── processing.py
+├── README.md
+└── requirements.txt
 ```
 
 ---

@@ -13,7 +13,7 @@ The interface emphasizes interpretability and visualization clarity.
 
 ---
 
-# Algorithm Selection
+## Algorithm Selection
 
 The project focuses on three classical edge detection algorithms:
 - Sobel
@@ -36,11 +36,13 @@ This allows direct comparison of:
 
 ---
 
-# Diagnostic Visualizations
+## Diagnostic Visualizations
 
 Instead of only showing final edge outputs, the app includes algorithm-specific diagnostic views.
 
-## Sobel
+Instead of using a single generic diagnostic for all algorithms, the app uses algorithm-specific visualizations tailored to the mathematical principles of each detector.
+
+### Sobel
 
 Uses a gradient magnitude heatmap to visualize edge strength.
 
@@ -48,21 +50,17 @@ Purpose:
 - show spatial gradient intensity
 - connect derivatives to edge detection
 
----
-
-## Laplacian
+### Laplacian
 
 Uses a zero-crossing overlay.
 
 Purpose:
 - visualize sign changes of the second derivative
-- demonstrate why Laplacian is sensitive to noise
+- demonstrate how second-order derivatives amplify noise
 
 Gaussian smoothing was added to allow exploration of noise suppression.
 
----
-
-## Canny
+### Canny
 
 Uses a strong/weak edge classification map based on gradient magnitude thresholds.
 
@@ -74,7 +72,7 @@ The visualization is intentionally educational rather than a direct extraction o
 
 ---
 
-# Evaluation Metric
+## Evaluation Metric
 
 The app uses edge density as a simple quantitative metric.
 
@@ -87,9 +85,19 @@ A user-adjustable threshold was chosen because:
 
 This also reinforces the concept of parameter sensitivity.
 
+### Edge Density Thresholding
+
+An important design refinement involved the edge density metric.
+
+Initially, edge density was computed using the proportion of nonzero pixels in the edge response image. However, gradient-based methods such as Sobel and Laplacian produce many low-amplitude nonzero responses, causing unrealistically high edge density values.
+
+To improve interpretability, the metric was modified to count only pixels above a user-adjustable threshold. This allows users to explore how edge sensitivity affects quantitative evaluation and demonstrates that weak gradient responses are not always meaningful edges.
+
+This design choice intentionally prioritizes educational understanding of threshold sensitivity over strict adherence to raw algorithm outputs.
+
 ---
 
-# Reliability and Usability
+## Reliability and Usability
 
 Several design choices were made to improve usability:
 
@@ -103,7 +111,7 @@ The interface was intentionally kept minimal to support non-expert users.
 
 ---
 
-# Deployment
+## Deployment
 
 The app was deployed using:
 - Hugging Face Spaces
@@ -114,7 +122,7 @@ The repository structure was kept modular for readability and reproducibility.
 
 ---
 
-# Future Improvements
+## Future Improvements
 
 Potential future extensions include:
 - non-maximum suppression visualization
