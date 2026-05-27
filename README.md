@@ -186,25 +186,25 @@ https://huggingface.co/spaces/nyc0le/edge-detection-playground
 ```text
 edge-detection-playground/
 │
-├── sample_images/
-│   └── portrait.jpeg
+|- sample_images
+│     |- portrait.jpeg
 │
-├── screenshots/
-│   ├── main_interface.png
-│   ├── sobel.png
-│   ├── laplacian.png
-│   └── canny.png
+|- screenshots
+│     |- main_interface.png
+│     |- sobel.png
+│     |- laplacian.png
+│     |- canny.png
 │
-├── docs/
-│   └── design_choices.md
+|- .streamlit
+│     |- config.toml
 │
-├── .gitattributes
-├── app.py
-├── Dockerfile
-├── metrics.py
-├── processing.py
-├── README.md
-└── requirements.txt
+|- app.py
+|- processing.py
+|- metrics.py
+|- Dockerfile
+|- requirements.txt
+|- README.md
+|- design_choices.md
 ```
 
 ---
